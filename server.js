@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 
 //MongoDB Atlas cluster URI
 const dbURI =
-  "mongodb+srv://storync:Codelife199@storync.c2wlrvb.mongodb.net/storync?retryWrites=true&w=majority";
+  "mongodb+srv://storync:password@storync.c2wlrvb.mongodb.net/storync?retryWrites=true&w=majority";
 mongoose
   .connect(dbURI)
   .then((result) => {

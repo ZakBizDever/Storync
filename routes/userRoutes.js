@@ -1,50 +1,18 @@
 const express = require("express");
-const USer = require("../models/user");
+const userController = require("../controllers/userController");
+
 const router = express.Router();
 
 //GET
-router.get("/:id", (req, res) => {
-  const { id } = req.params;
-
-  User.findById(id)
-    .then((result) => {
-      res.status(200).json(result);
-    })
-    .catch((err) => {
-      console.error("Error saving data:", err);
-      res.status(500).json({ error: "Internal Server Error" });
-    });
-});
+router.get("/:id", userController.get_user);
 
 //POST
-router.post("/", (req, res) => {
-  const product = new User(req.body);
-
-  product
-    .save()
-    .then((result) => {
-      res.status(201).json(result);
-    })
-    .catch((err) => {
-      console.error("Error saving data:", err);
-      res.status(500).json({ error: "Internal Server Error" });
-    });
-});
+router.post("/register", userController.register_user);
+router.post("/login", userController.login_user);
 
 //PUT
 
 //DELETE
-router.delete("/:id", (req, res) => {
-  const { id } = req.params;
-
-  User.findById(id)
-    .then((result) => {
-      res.status(200).json(result);
-    })
-    .catch((err) => {
-      console.error("Error saving data:", err);
-      res.status(500).json({ error: "Internal Server Error" });
-    });
-});
+router.delete("/:id", userController.delete_user);
 
 module.exports = router;

@@ -1,5 +1,5 @@
 import { Request, Response } from '@utils/commonImports';
-import JoiService from '../utils/JoiService';
+import JoiService from '../../utils/JoiService';
 import User from '../models/user';
 
 const bcrypt = require("bcrypt");

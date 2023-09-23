@@ -2,9 +2,9 @@ import express, { Request, Response, NextFunction } from 'express';
 import mongoose, { Connection } from 'mongoose';
 import User from "./models/user";
 
+require("dotenv").config();
 
 const app = express();
-require("dotenv").config();
 const jwt = require("jsonwebtoken");
 const productRoutes = require("./routes/productRoutes");
 const userRoutes = require("./routes/userRoutes");

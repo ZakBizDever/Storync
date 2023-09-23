@@ -2,9 +2,10 @@ import { Request, Response } from '@utils/commonImports';
 import JoiService from '../../utils/JoiService';
 import User from '../models/user';
 
+require("dotenv").config();
+
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-require("dotenv").config();
 
 const validationSchema = JoiService.joi.object({
   //name: Joi.string().min(3).required()

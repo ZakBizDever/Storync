@@ -1,4 +1,4 @@
-import { express } from '../utils/commonImports';
+import { express } from '../../utils/commonImports';
 
 // const express = require("express");
 const productController = require("../controllers/productController");

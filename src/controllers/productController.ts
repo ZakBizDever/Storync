@@ -1,5 +1,5 @@
 import { Request, Response, Document, Model } from '@utils/commonImports';
-import JoiService from '../utils/JoiService';
+import JoiService from '../../utils/JoiService';
 import Product, { IProduct } from '../models/product';
 
 const validationSchema = JoiService.joi.object({

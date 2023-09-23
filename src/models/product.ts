@@ -1,4 +1,4 @@
-import { mongoose, Document, Model, Schema } from '../utils/commonImports';
+import { mongoose, Document, Model, Schema } from '../../utils/commonImports';
 
 // Defining the interface to represent a product document
 interface IProduct extends Document {
